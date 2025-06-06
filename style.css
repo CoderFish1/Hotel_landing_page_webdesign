@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: "Roboto", sans-serif; */
+    font-family: "Epilogue", sans-serif;
+    /* font-family: "Barlow", sans-serif; */
+
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(142, 150, 157);
+    position: relative;
+}
+
+nav {
+    height: 75px;
+    width: 100%;
+    background-color: rgb(145, 194, 226);
+    /* background-color: rgb(193, 230, 255); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+}
+
+ul li {
+    list-style: none;
+    font-weight: bolder;
+    font-size: 1.4vw;
+    padding: 1vw 0;
+    transition: 0.2s ease;
+}
+
+ul li:hover {
+    transform: scale(1.3);
+    color: rgb(140, 117, 104);
+    cursor: pointer;
+}
+
+.outerNav {
+    padding: 0 3.2vw;
+    /*top-bottom) (left-right) */
+    font-size: 2vw;
+    font-weight: bolder;
+}
+
+ul {
+    padding: 0 2.5vw;
+    gap: 4vw;
+}
+
+.content {
+    /* dont forget to add space btw minus(-) sign, it's in syntax */
+    height: calc(100% - 75px);
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.left {
+    height: 100%;
+    width: 60%;
+    padding: 5vw 6vw;
+    background-color: rgb(145, 194, 226);
+}
+
+.right {
+    height: 100%;
+    width: 40%;
+    
+    background-color: rgb(145, 194, 226);
+    /* background-color: rgb(140, 117, 104); */
+    background-image: url("hotel.png");
+    background-size: cover;
+}
+
+.left h1 {
+    font-weight: 510;
+    font-size: 3.8vw;
+    line-height: 4.5vw;
+}
+
+h1 span {
+    font-weight: bold;
+    color: rgb(140, 117, 104);
+    text-decoration: underline;
+    /* to give span(which in inline element), block properties so that we can apply block propeties easily */
+    display: inline-block;
+    transition: 0.3s ease-out
+}
+
+h1 span:hover {
+    font-size: 4vw;
+    color: whitesmoke;
+}
+
+.left p {
+    font-size: 2vw;
+    margin-top: 2vw;
+}
+
+h5 {
+    font-size: 1.6vw;
+    font-weight: 550;
+    margin-top: 4vw;
+}
+
+.expBtn {
+    font-size: 1.2vw;
+    margin-top: 2vw;
+    padding: 1.2vw 1.7vw;
+    border-radius: 7%;
+    background-color: rgb(140, 117, 104);
+    border: none;
+    font-size: 1.2vw;
+    font-weight: 700;
+    color: whitesmoke;
+    transition: 1s ease;
+}
+
+.expBtn:hover {
+    box-shadow: 0 0 25px rgb(140, 117, 104);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#signIn {
+    background-color: rgb(140, 117, 104);
+    padding: 1vw 2vw;
+    border: none;
+    font-size: 1.2vw;
+    font-weight: 700;
+    color: whitesmoke;
+    transition: 1s ease;
+}
+
+#signIn:hover {
+    box-shadow: 0 0 25px rgb(140, 117, 104);
+    transform: scale(1.1);
+    transform: translateX(20px);
+    cursor: pointer;
+}
+i{
+    display: none;
+}
+@media screen and (max-width: 600px) {
+    ul li{
+        display: none;
+    }
+    .content{
+        flex-direction: column;
+    }
+    .right, .left{
+        width: 100%;
+    }
+    nav .outerNav{
+        font-size: 3vh;
+        padding: 0 5vw;
+    }
+    #signIn{
+        margin-right: 2.4vh;
+        transition: 1s ease;
+        font-size: 2.8vw;
+        padding: 2vw 5vw;
+    }
+    #signIn:hover {
+    transform: scale(1.2);
+    box-shadow: none;
+    cursor: default;
+}
+.left h1 {
+    font-weight: 510;
+    font-size: 6.8vw;
+    line-height: 8vw;
+}
+h1 span{
+    transition: none;
+}
+h1 span:hover {
+    font-size: 6vw;
+    color: rgb(140, 117, 104);
+}
+.left p {
+    font-size: 4.5vw;
+    margin-top: 6.5vw;
+}
+h5 {
+    font-size: 3.8vw;
+    font-weight: 550;
+    margin-top: 9.5vw;
+}
+.expBtn{
+    font-size: 2.7vw;
+}
+i{
+    display: block;
+    font-weight: 900;
+    font-size: x-large
+}
+}
